@@ -20,27 +20,27 @@ class HomePage extends Component {
             Infinite: true,
             speed: 500,
             slidesToShow: 4,
-            slidesToScroll:1,
+            slidesToScroll: 1,
         };
 
         return (
-           <div>
-                <HomeHeader/>
-                <Specialty 
-                settings= {settings}
+            <div>
+                <HomeHeader />
+                <Specialty
+                    settings={settings}
                 />
-                <MedicalFacility 
-                settings= {settings}
+                <MedicalFacility
+                    settings={settings}
                 />
-                <OutStandingDoctor 
-                settings= {settings}
+                <OutStandingDoctor
+                    settings={settings}
                 />
-                <HandBook 
-                settings= {settings}
+                <HandBook
+                    settings={settings}
                 />
-                <About/>
-                <HomeFooter/>
-           </div>
+                <About />
+                <HomeFooter />
+            </div>
         );
     }
 

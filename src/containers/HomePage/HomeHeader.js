@@ -13,7 +13,6 @@ changeLanguage =(language)=>{
 }
     render() {
         let language = this.props.language;
-        console.log('check language', language);
 
         return (
             <React.Fragment>
@@ -99,6 +98,7 @@ changeLanguage =(language)=>{
 const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo,
         language: state.app.language,
 
     };

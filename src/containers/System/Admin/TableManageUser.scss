@@ -1,0 +1,44 @@
+#TableManageUser {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+   
+    th{
+      border: 1px solid #ddd;
+      padding: 8px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    td{
+      border: 1px solid #ddd;
+      padding: 8px;
+      .btn-edit{
+          width: 50px;
+          background-color: transparent;
+          color: orange;
+          border: none;
+          outline: none;
+          &:hover{
+              background-color: transparent !important;
+              color: orange !important;
+          }
+      }
+      .btn-delete{
+          width: 50px;
+          background-color: transparent;
+          color: rgb(245, 22, 22);
+          border: none;
+          outline: none;
+          &:hover{
+              background-color: transparent !important;
+              color: rgb(245, 22, 22) !important;
+          }
+      }
+    }
+    tr:nth-child(even){background-color: #f2f2f2;}
+    tr:hover {background-color: #ddd;}
+    
+  }

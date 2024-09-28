@@ -5,7 +5,7 @@ import * as actions from "../../store/actions";
 import Navigator from '../../components/Navigator';
 import { adminMenu } from './menuApp';
 import './Header.scss';
-import { LANGUAGUES } from '../../utils/constant';
+import { LANGUAGES } from '../../utils/constant';
 import { FormattedMessage } from 'react-intl';
 
 class Header extends Component {
@@ -26,12 +26,12 @@ class Header extends Component {
                     <span className='welcome'><FormattedMessage id="homeheader.welcome" />
                         {userInfo && userInfo.firstName ? userInfo.firstName : ''} !
                     </span>
-                    <span className={language === LANGUAGUES.VI ? "language-vi active" : "language-vi"}
-                        onClick={() => this.handleChangeLanguage(LANGUAGUES.VI)}>
+                    <span className={language === LANGUAGES.VI ? "language-vi active" : "language-vi"}
+                        onClick={() => this.handleChangeLanguage(LANGUAGES.VI)}>
                         VN
                     </span>
-                    <span className={language === LANGUAGUES.EN ? "language-en active" : "language-en"}
-                        onClick={() => this.handleChangeLanguage(LANGUAGUES.EN)}>
+                    <span className={language === LANGUAGES.EN ? "language-en active" : "language-en"}
+                        onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}>
                         EN
                     </span>
                     {/* nút logout */}

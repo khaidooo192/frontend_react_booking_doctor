@@ -62,5 +62,12 @@
         "image": "Avatar",
         "save": "Save User",
         "edit": "Edit User"
-    }
+    },
+    "homepage":{
+        "outstanding-doctor": "Last week's feature Doctor",
+        "more-info": "More info",
+        "medical-facility": "Medical facility",
+        "specialty": "Medical Specialty",
+        "handbook": "Handbook"
+    } 
 }

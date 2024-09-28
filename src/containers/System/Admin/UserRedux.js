@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserRedux.scss'
-import { LANGUAGUES, CRUD_ACTIONS, getBase64 } from '../../../utils/constant';
+import { LANGUAGES, CRUD_ACTIONS, getBase64 } from '../../../utils/constant';
 import * as actions from "../../../store/actions";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -57,14 +57,14 @@ class UserRedux extends Component {
             let arrGenders = this.props.genderRedux;
             this.setState({
                 genderArr: arrGenders,
-                gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].key : ''
+                gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].keyMap : ''
             })
         }
         if (prevProps.roleRedux !== this.props.roleRedux) {
             let arrRoles = this.props.roleRedux
             this.setState({
                 roleArr: arrRoles,
-                role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : ''
+                role: arrRoles && arrRoles.length > 0 ? arrRoles[0].keyMap : ''
 
             })
         }
@@ -72,7 +72,7 @@ class UserRedux extends Component {
             let arrPositions = this.props.positionRedux
             this.setState({
                 positionArr: arrPositions,
-                position: arrPositions && arrPositions.length > 0 ? arrPositions[0].key : ''
+                position: arrPositions && arrPositions.length > 0 ? arrPositions[0].keyMap : ''
             })
         }
         if (prevProps.listUsers !== this.props.listUsers) {
@@ -86,9 +86,9 @@ class UserRedux extends Component {
                 lastName: '',
                 phoneNumber: '',
                 address: '',
-                gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].key : '',
-                role: arrRoles && arrRoles.length > 0 ? arrRoles[0].key : '',
-                position: arrPositions && arrPositions.length > 0 ? arrPositions[0].key : '',
+                gender: arrGenders && arrGenders.length > 0 ? arrGenders[0].keyMap : '',
+                role: arrRoles && arrRoles.length > 0 ? arrRoles[0].keyMap : '',
+                position: arrPositions && arrPositions.length > 0 ? arrPositions[0].keyMap : '',
                 avatar: '',
                 previewImgUrl: '',
                 action: CRUD_ACTIONS.CREATE
@@ -274,8 +274,8 @@ class UserRedux extends Component {
                                         genders.map((item, index) => {
 
                                             return (
-                                                <option key={index} value={item.key} >
-                                                    {language === LANGUAGUES.VI ? item.valueVi : item.valueEn}
+                                                <option key={index} value={item.keyMap} >
+                                                    {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                                 </option>
                                             )
 
@@ -293,8 +293,8 @@ class UserRedux extends Component {
                                         positions.map((item, index) => {
 
                                             return (
-                                                <option key={index} value={item.key}>
-                                                    {language === LANGUAGUES.VI ? item.valueVi : item.valueEn}
+                                                <option key={index} value={item.keyMap}>
+                                                    {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                                 </option>
                                             )
 
@@ -312,8 +312,8 @@ class UserRedux extends Component {
                                         roles.map((item, index) => {
 
                                             return (
-                                                <option key={index} value={item.key}>
-                                                    {language === LANGUAGUES.VI ? item.valueVi : item.valueEn}
+                                                <option key={index} value={item.keyMap}>
+                                                    {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                                 </option>
                                             )
 

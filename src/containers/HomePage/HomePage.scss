@@ -1,3 +1,5 @@
+
+
 .section-share {
     height: 330px;
 
@@ -76,7 +78,7 @@
                 }
 
                 &.section-outstanding-doctor {
-                    background-image: url('../../assets/outstanding-doctor/doctor1.png');
+                    // background-image: url('../../assets/outstanding-doctor/doctor1.png');
                     background-size: contain !important;
                     width: 120px;
                     height: 120px;
@@ -114,6 +116,12 @@
 }
 
 //reset slick slider css
+.slick-disabled {
+    display: none !important;
+  }
+// .slick-arrow {
+//     display: none !important;
+//     }
 .slick-prev {
     left: -10px !important;
     z-index: 1000 !important;
@@ -147,6 +155,7 @@
     }
 
 }
+
 
 .section-about {
     padding: 0 100px;

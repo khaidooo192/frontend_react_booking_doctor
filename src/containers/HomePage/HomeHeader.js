@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import logo from '../../assets/logo.svg' 
 import { FormattedMessage } from 'react-intl';
-import { LANGUAGUES } from '../../utils/constant';
+import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions';
 
 class HomeHeader extends Component {
@@ -43,8 +43,8 @@ changeLanguage =(language)=>{
                     </div>
                     <div className='right-content'>
                         <div className='support'><i className="fas fa-question-circle"></i><FormattedMessage  id="homeheader.support" /></div>
-                        <div className= {language === LANGUAGUES.VI ? 'language-vi active' : 'language-vi'}><span onClick={()=>this.changeLanguage(LANGUAGUES.VI)}>VN</span></div>
-                        <div className= {language === LANGUAGUES.EN ? 'language-en active' : 'language-en'}><span onClick={()=>this.changeLanguage(LANGUAGUES.EN)}>EL</span></div>
+                        <div className= {language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}><span onClick={()=>this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
+                        <div className= {language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={()=>this.changeLanguage(LANGUAGES.EN)}>EL</span></div>
 
                     </div>
                 </div>

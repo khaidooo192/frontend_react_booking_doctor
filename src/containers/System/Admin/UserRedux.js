@@ -327,7 +327,7 @@ class UserRedux extends Component {
                                     <input id='previewImg' type='file' hidden
                                         onChange={(event) => this.handleOnchangeImage(event)}
                                     />
-                                    <label className='label-upload' htmlFor='previewImg'>
+                                    <label className='label-upload' htmlFor ="previewImg">
                                         Tải ảnh <i className='fas fa-upload'></i></label>
                                     <div className='preview-image'
                                         style={{ backgroundImage: `url(${this.state.previewImgUrl})` }}
@@ -394,7 +394,7 @@ const mapDispatchToProps = dispatch => {
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleStart: () => dispatch(actions.fetchRoleStart()),
         createNewUser: (data) => dispatch(actions.createNewUser(data)),
-        fectUserRedux: () => dispatch(actions.fetchAllUsersStart()),
+        fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
         editAUserRedux: (data) => dispatch(actions.editAUser(data))
 
 

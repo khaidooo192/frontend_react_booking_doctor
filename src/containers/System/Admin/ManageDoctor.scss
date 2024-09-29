@@ -1,5 +1,6 @@
 .manage-doctor-container{
     padding: 5px;
+
     .manage-doctor-title{
         text-align: center;
         margin: 15px 0;
@@ -16,6 +17,22 @@
         &:hover{
             opacity: 0.6;
         }
-
     }
+    .more-infor{
+        display: flex;
+        gap: 15px;
+        padding-bottom: 15px;
+        .content-left{
+            width: 40%;
+        }
+        .content.right {
+            width: 60%;
+
+        }
+    }
+}
+
+.content-container .content {
+     margin: 0px !important ;
+     box-shadow: none !important; 
 }

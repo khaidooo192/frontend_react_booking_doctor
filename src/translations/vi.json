@@ -59,5 +59,9 @@
         "medical-facility": "Cơ sở nổi bật",
         "specialty": "Chuyên khoa phổ biến",
         "handbook": "Cẩm nang nổi bật"
-    } 
+    },
+    "manage-doctor":{
+        "save-content-doctor": "Lưu thông tin",
+        "create-content-doctor":" Tạo thông tin"
+    }
 }

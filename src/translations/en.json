@@ -69,5 +69,9 @@
         "medical-facility": "Medical facility",
         "specialty": "Medical Specialty",
         "handbook": "Handbook"
-    } 
+    },
+    "manage-doctor":{
+        "save-content-doctor": "Save content",
+        "create-content-doctor":" Create content"
+    }
 }

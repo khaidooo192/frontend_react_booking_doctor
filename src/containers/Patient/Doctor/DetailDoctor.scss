@@ -1,17 +1,18 @@
 .doctor-detail-container{
+
     height: 500px;
-    margin: 0 100px;
-    border: 1px solid red;
+    margin: 30px 100px;
+
     .intro-doctor{
         display: flex;
-        border: 1px solid gray;
+        margin: 0 100px;
         .content-left{
             width: 20%;
             background: center center no-repeat;
             height: 120px;
             width: 120px;
             border-radius: 50%;
-            margin: 10px 20px;
+            margin : 10px 20px;
             background-position-y: revert-layer;            
         }
         .content-right{
@@ -29,4 +30,23 @@
             }
         }
     }
-}
+    .detail-infor-doctor{
+       border-top: 1px solid #ddd;
+       border-bottom: 1px solid #ddd;
+        padding: 10px 100px;
+        background: #ddd;
+        margin-bottom: 20px;
+            h3{
+                font-size: 17px;
+            }
+            img{
+                justify-self: center;
+                max-width: 100%;
+                max-height: 100%;            }
+        }
+            
+        
+    }
+    .comment-doctor{
+        height: 50px;
+    }

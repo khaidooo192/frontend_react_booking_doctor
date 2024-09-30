@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { connect } from "react-redux";
 import HomeHeader from '../../HomePage/HomeHeader';
 import './DetailDoctor.scss'
@@ -63,12 +63,18 @@ class DetailDoctor extends Component {
 
                     </div>
                     <div className='detail-for-doctor' >
+
                         {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
                             &&
+
                             <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }} >
-                            
+
                             </div>
+
                         }
+
+
+
                     </div>
                     <div className='comment-doctor'>
 

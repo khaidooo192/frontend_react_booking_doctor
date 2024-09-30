@@ -35,7 +35,9 @@
             "manage-specialty":"Quản lý Chuyên Khoa",
             "handbook": "Cẩm nang",
             "manage-handbook": "Quản lý Cẩm nang"
-
+        },
+        "doctor":{
+            "manage-schedule": "Kế hoạch khám bệnh"
         }
     },
     "manage-user":{
@@ -63,5 +65,11 @@
     "manage-doctor":{
         "save-content-doctor": "Lưu thông tin",
         "create-content-doctor":" Tạo thông tin"
+    },
+    "manage-schedule":{
+        "title":"Quản lý kế hoạch khám bệnh",
+        "choose-doctor": "Chọn Bác sĩ",
+        "choose-date": "Chọn ngày",
+        "save":"Lưu thông tin"
     }
 }

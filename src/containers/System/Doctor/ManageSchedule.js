@@ -18,7 +18,7 @@ class ManageSchedule extends Component {
             listDoctors: [],
             selectedDoctor: {},
             currentDate: '',
-            rangeTime: []
+            rangeTime: [],
         }
     }
     componentDidMount() {
@@ -94,14 +94,14 @@ class ManageSchedule extends Component {
         }
     }
 
-    handleSaveSchedule = async() => {
+    handleSaveSchedule = async () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state;
-        let result =[];
-        if (!currentDate ) {
+        let result = [];
+        if (!currentDate) {
             toast.error('Invalid Date');
             return;
         }
-        if(selectedDoctor && _.isEmpty(selectedDoctor)){
+        if (selectedDoctor && _.isEmpty(selectedDoctor)) {
             toast.error('Invalid Doctor');
             return;
         }
@@ -109,38 +109,43 @@ class ManageSchedule extends Component {
 
         // let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
         let formatedDate = new Date(currentDate).getTime()
-        if(rangeTime && rangeTime.length >0){
-            let selectedTime = rangeTime.filter(item =>item.isSelected === true);
-            if(selectedTime && selectedTime.length >0){
-                selectedTime.map(schedule=> {
-                    
+        if (rangeTime && rangeTime.length > 0) {
+            let selectedTime = rangeTime.filter(item => item.isSelected === true);
+            if (selectedTime && selectedTime.length > 0) {
+                selectedTime.map(schedule => {
+
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = formatedDate;
                     object.timeType = schedule.keyMap;
                     result.push(object)
                 })
-            }else{
+            } else {
                 toast.error('Invalid Time');
                 return;
 
-            }         
+            }
         }
 
         let res = await saveBulkSchedule({
-            arrSchedule : result,
-            doctorId : selectedDoctor.value,
+            arrSchedule: result,
+            doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         });
-        console.log('check bulk Schedule ', res );
-        
-        console.log('check result:  ', result);   
+        if (res && res.errCode === 0) {
+            toast.success('Save infor Succeed !');
+        } else {
+            toast.error("Error saveBulkScheduleDoctor")
+            console.log('Error saveBulkScheduleDoctor >>> res: ', res);
+
+        }
 
     }
     render() {
 
         let { rangeTime } = this.state;
         let { language } = this.state;
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         return (
             <div className='manage-schedule-container'>
                 <div className='m-s-title'>
@@ -163,7 +168,7 @@ class ManageSchedule extends Component {
                                 className="form-control"
                                 value={this.state.currentDate}
                                 //ngay toi thieu (ngay hien tai)
-                                minDate={new Date()}
+                                minDate={yesterday}
                             />
                         </div>
                         <div className='col-12 pick-hour-container'>

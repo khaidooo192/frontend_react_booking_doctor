@@ -22,54 +22,61 @@
         "child6": "Khám nha khoa"
     },
     "menu": {
-
         "admin": {
             "manage-user": "Người dùng",
             "manage-doctor": "Quản lý Bác sĩ",
             "manage-admin": "Quản lý Admin",
-            "crud":"CRUD user",
-            "crud-redux":"CRUD Redux",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
             "clinic": "Phòng Khám",
-            "manage-clinic": "Quản lý Phòng Khám",          
+            "manage-clinic": "Quản lý Phòng Khám",
             "specialty": "Chuyên Khoa",
-            "manage-specialty":"Quản lý Chuyên Khoa",
+            "manage-specialty": "Quản lý Chuyên Khoa",
             "handbook": "Cẩm nang",
             "manage-handbook": "Quản lý Cẩm nang"
         },
-        "doctor":{
+        "doctor": {
             "manage-schedule": "Kế hoạch khám bệnh"
         }
     },
-    "manage-user":{
-        "add":"Thêm mới Người dùng",
-        "email":"Email",
-        "password":"Mật khẩu",
-        "first-name":"Tên",
-        "last-name":"Họ",
-        "phone-number":"Số điện thoại",
-        "address":"Địa chỉ",
-        "gender":"Giới tính",
-        "position":"Chức danh",
-        "role":"Vai trò",
-        "image":"Ảnh đại diện",
+    "manage-user": {
+        "add": "Thêm mới Người dùng",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "first-name": "Tên",
+        "last-name": "Họ",
+        "phone-number": "Số điện thoại",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
+        "position": "Chức danh",
+        "role": "Vai trò",
+        "image": "Ảnh đại diện",
         "save": "Lưu User",
         "edit": "Lưu Thay đổi"
     },
-    "homepage":{
+    "homepage": {
         "outstanding-doctor": "Bác sĩ nổi bật tuần qua",
         "more-info": "Xem thêm",
         "medical-facility": "Cơ sở nổi bật",
         "specialty": "Chuyên khoa phổ biến",
         "handbook": "Cẩm nang nổi bật"
     },
-    "manage-doctor":{
+    "manage-doctor": {
         "save-content-doctor": "Lưu thông tin",
-        "create-content-doctor":" Tạo thông tin"
+        "create-content-doctor": " Tạo thông tin"
     },
-    "manage-schedule":{
-        "title":"Quản lý kế hoạch khám bệnh",
+    "manage-schedule": {
+        "title": "Quản lý kế hoạch khám bệnh",
         "choose-doctor": "Chọn Bác sĩ",
         "choose-date": "Chọn ngày",
-        "save":"Lưu thông tin"
+        "save": "Lưu thông tin"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Lịch khám",
+            "no-schedule": "Bác sĩ không có lịch khám trong thời gian này, vui lòng chọn thời gian khác",
+            "choose": "Chọn ",
+            "book-free": " và đặt (miễn phí)"
+        }
     }
 }

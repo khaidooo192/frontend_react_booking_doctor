@@ -14,12 +14,18 @@
         gap: 20px;
         flex-wrap: wrap;
 
-        button{
+        .btn-schedule{
             padding: 5px 15px;
-            border: 1px solid gray;
+            border: 2px solid gray;
+            border-radius: 7px;
+            &.active{
+                background: orange !important;
+                border: none;
+            }
         }
     }
     .btn-save-schedule{
         margin-top: 20px;
+        
     }
 }
